@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Device Width:Height</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .result{
+            color: rgb(252, 198, 23);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">🤩📏</h1>
+        <h3>Your device width is <span class="result" id="d-width"></span> px.</h3>
+        <h3>Your device height is <span class="result" id="d-height"></span> px.</h3>
+        <h3>Your browser width is <span class="result" id="b-width"></span> px.</h3>
+        <h3>Your browser height is <span class="result" id="b-height"></span> px.</h3>
+    </div>
+
+<script>
+    let d_width=document.getElementById("d-width");
+    let calD_Width=screen.width;
+    d_width.innerText=calD_Width;
+
+    let d_height=document.getElementById("d-height");
+    let calD_Height=screen.height;
+    d_height.innerText=calD_Height;
+
+    let b_width=document.getElementById("b-width");
+    let calB_Width=screen.availWidth;
+    b_width.innerText=calB_Width;
+
+    let b_height=document.getElementById("b-height");
+    let calB_Height=screen.availHeight;
+    b_height.innerText=calB_Height;
+</script>
+</body>
+</html>
